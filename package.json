@@ -1,0 +1,44 @@
+{
+  "name": "mcp-gcp-asset-inventory",
+  "version": "1.0.1",
+  "description": "Model Context Protocol server for Google Cloud Asset Inventory",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-gcp-asset-inventory": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/index.js",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.5.0",
+    "zod": "^3.22.2",
+    "zod-to-json-schema": "^3.23.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5.3.3",
+    "shx": "^0.3.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gcp",
+    "google-cloud",
+    "asset-inventory"
+  ],
+  "author": "Diego Sanz Martín",
+  "license": "MIT",
+  "types": "./dist/index.d.ts"
+}
